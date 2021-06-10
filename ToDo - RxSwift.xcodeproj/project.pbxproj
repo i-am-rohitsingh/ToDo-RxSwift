@@ -3,27 +3,33 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		F9ED6805265AC087002E4310 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ED6804265AC087002E4310 /* AppDelegate.swift */; };
 		F9ED6807265AC087002E4310 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ED6806265AC087002E4310 /* SceneDelegate.swift */; };
-		F9ED6809265AC087002E4310 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ED6808265AC087002E4310 /* ViewController.swift */; };
 		F9ED680C265AC087002E4310 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9ED680A265AC087002E4310 /* Main.storyboard */; };
 		F9ED680E265AC08C002E4310 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9ED680D265AC08C002E4310 /* Assets.xcassets */; };
 		F9ED6811265AC08C002E4310 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9ED680F265AC08C002E4310 /* LaunchScreen.storyboard */; };
+		F9ED681A265AC0F2002E4310 /* TaskListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ED6819265AC0F2002E4310 /* TaskListViewController.swift */; };
+		F9ED681C266D4F9F002E4310 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ED681B266D4F9F002E4310 /* AddTaskViewController.swift */; };
+		F9ED681F266D527D002E4310 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ED681E266D527D002E4310 /* Task.swift */; };
+		F9ED6822266D596D002E4310 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = F9ED6821266D596D002E4310 /* RxCocoa */; };
+		F9ED6824266D596D002E4310 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F9ED6823266D596D002E4310 /* RxSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F9ED6801265AC087002E4310 /* ToDo - RxSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ToDo - RxSwift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9ED6804265AC087002E4310 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F9ED6806265AC087002E4310 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F9ED6808265AC087002E4310 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F9ED680B265AC087002E4310 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F9ED680D265AC08C002E4310 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F9ED6810265AC08C002E4310 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F9ED6812265AC08C002E4310 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9ED6819265AC0F2002E4310 /* TaskListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewController.swift; sourceTree = "<group>"; };
+		F9ED681B266D4F9F002E4310 /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
+		F9ED681E266D527D002E4310 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +37,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9ED6824266D596D002E4310 /* RxSwift in Frameworks */,
+				F9ED6822266D596D002E4310 /* RxCocoa in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +64,33 @@
 		F9ED6803265AC087002E4310 /* ToDo - RxSwift */ = {
 			isa = PBXGroup;
 			children = (
+				F9ED681D266D51E5002E4310 /* Models */,
+				F9ED6818265AC097002E4310 /* Controllers */,
 				F9ED6804265AC087002E4310 /* AppDelegate.swift */,
 				F9ED6806265AC087002E4310 /* SceneDelegate.swift */,
-				F9ED6808265AC087002E4310 /* ViewController.swift */,
 				F9ED680A265AC087002E4310 /* Main.storyboard */,
 				F9ED680D265AC08C002E4310 /* Assets.xcassets */,
 				F9ED680F265AC08C002E4310 /* LaunchScreen.storyboard */,
 				F9ED6812265AC08C002E4310 /* Info.plist */,
 			);
 			path = "ToDo - RxSwift";
+			sourceTree = "<group>";
+		};
+		F9ED6818265AC097002E4310 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F9ED6819265AC0F2002E4310 /* TaskListViewController.swift */,
+				F9ED681B266D4F9F002E4310 /* AddTaskViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F9ED681D266D51E5002E4310 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F9ED681E266D527D002E4310 /* Task.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +109,10 @@
 			dependencies = (
 			);
 			name = "ToDo - RxSwift";
+			packageProductDependencies = (
+				F9ED6821266D596D002E4310 /* RxCocoa */,
+				F9ED6823266D596D002E4310 /* RxSwift */,
+			);
 			productName = "ToDo - RxSwift";
 			productReference = F9ED6801265AC087002E4310 /* ToDo - RxSwift.app */;
 			productType = "com.apple.product-type.application";
@@ -110,6 +140,9 @@
 				Base,
 			);
 			mainGroup = F9ED67F8265AC087002E4310;
+			packageReferences = (
+				F9ED6820266D596C002E4310 /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = F9ED6802265AC087002E4310 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,7 +170,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9ED6809265AC087002E4310 /* ViewController.swift in Sources */,
+				F9ED681A265AC0F2002E4310 /* TaskListViewController.swift in Sources */,
+				F9ED681C266D4F9F002E4310 /* AddTaskViewController.swift in Sources */,
+				F9ED681F266D527D002E4310 /* Task.swift in Sources */,
 				F9ED6805265AC087002E4310 /* AppDelegate.swift in Sources */,
 				F9ED6807265AC087002E4310 /* SceneDelegate.swift in Sources */,
 			);
@@ -341,6 +376,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F9ED6820266D596C002E4310 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F9ED6821266D596D002E4310 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F9ED6820266D596C002E4310 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		F9ED6823266D596D002E4310 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F9ED6820266D596C002E4310 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F9ED67F9265AC087002E4310 /* Project object */;
 }
